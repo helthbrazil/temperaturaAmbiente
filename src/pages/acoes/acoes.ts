@@ -44,7 +44,7 @@ export class AcoesPage {
           Loading.dismissLoading();
         }, error => {
           console.error(error);
-          this.toast.showToast("Cep inválido", Toast.BOTTOM, 400);
+          this.toast.showToast("Cep inválido", Toast.BOTTOM, 4000);
           Loading.dismissLoading();
         });
 
