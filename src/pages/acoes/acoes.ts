@@ -35,7 +35,7 @@ export class AcoesPage {
 
   regarAPlanta() {
     this.networkUtil.checkNetwork(responsee => {
-      let url: string = "https://viacep.com.br/ws/" + this.cep + "/json/";
+      let url: string = "https://viacep.com.br/ws/" + this.cep + "/json/"; 
       Loading.showLoading("Buscando CEP", Loading.CRESCENT, undefined);
       this.httpUtil.requestGet(url, {}, {},
         response => {
