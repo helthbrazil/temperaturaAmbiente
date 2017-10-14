@@ -1,6 +1,20 @@
 import { Injectable } from '@angular/core';
 @Injectable()
 export class DateUtil {
+
+    public dateToStringSimple(date: Date): string {
+        let dateString = "";
+        try {
+            dateString += date.getFullYear() + "-";
+            dateString += date.getMonth().toString().length == 2 ? date.getMonth() - 1 + "-" : "0" + (date.getMonth() - 1) + "-";
+            dateString += date.getDate().toString().length == 2 ? date.getDate() : "0" + (date.getDate());
+
+        } catch (error) {
+            return error;
+        }
+
+        return dateString;
+    }
     public stringToDateSimple(dateString: string): Date {
         var date = new Date();
         var month;

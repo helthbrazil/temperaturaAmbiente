@@ -4,6 +4,11 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="master" padding>
+<ion-content padding>
+  <ion-item>
+    <ion-label color="ocean" stacked>Quantidade de dias</ion-label>
+    <ion-input [(ngModel)]="dias" (ionChange)="restringirInput()" type="number"></ion-input>
+  </ion-item>
+  <button (tap)="buscarDados()" class="botao" ion-button block>Buscar dados</button>
   <h1>Aqui vai ficar os gráficos</h1>
 </ion-content>

@@ -13,6 +13,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+// BIBLIOTECA DE GRÁFICO
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+import '../../node_modules/chart.js/dist/Chart.bundle.min.js';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -22,6 +26,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    ChartsModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -31,8 +36,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     StatusBar, Alertas, Loading, Toast, NetworkUtil, LocalStorage, HttpUtil, DateUtil, Network, HTTP
   ]
 })
-export class AppModule {}
+export class AppModule { }

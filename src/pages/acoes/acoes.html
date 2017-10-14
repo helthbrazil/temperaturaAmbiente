@@ -7,14 +7,11 @@
 </ion-header>
 
 
-<ion-content (swipe)="deslizar($event)" padding>
-  <ion-item>
-    <ion-label color="ocean" floating>CEP</ion-label>
-    <ion-input [(ngModel)]="cep" type="number"></ion-input>
-  </ion-item>
+<ion-content (swipe)="deslizar($event)" padding> 
+
   <!--   <button ion-button block class="botao" (tap)="regarAPlanta()" color="ocean">Regar Planta</button> -->
   <button ion-button icon-start class="botao" block (tap)="regarAPlanta()" color="ocean">
     <ion-icon name="ios-water"></ion-icon>
-    Buscar Cep
+    Regar Planta
   </button>
 </ion-content>
